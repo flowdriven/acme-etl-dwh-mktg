@@ -1,0 +1,31 @@
+services: 
+  mysql: 
+    build: ./app-mysql/
+    container_name: acme-db 
+    restart: always
+    env_file:
+      - mysql.env 
+    ports:
+      - '3306:3306' 
+    networks:
+      - app-tier
+  load: 
+    build: ./app-load-db/
+    container_name: load-db
+    depends_on:
+      mysql:
+        condition: service_healthy 
+    links:
+      - mysql 
+    #restart: unless-stopped
+    tty: true 
+    env_file:
+      - load_db.env 
+    volumes:
+      - ./app-data:/app/data     
+    networks:
+      - app-tier
+ 
+networks:
+  app-tier:  
+    driver: bridge
