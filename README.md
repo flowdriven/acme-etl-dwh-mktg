@@ -70,7 +70,7 @@ This layer enables exploration and analysis of processed data through dbt querie
 
 ### High level view
 
-<img src="./readme_resources/analytics_diagram.drawio.png" alt="High Level View" width="1200"/>
+<img src="./readme_resources/analytics_diagram.drawio.png" alt="High Level View" width="600"/>
 
 ## 4. Tools
 
