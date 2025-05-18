@@ -46,7 +46,7 @@ This layer is responsible for collecting and importing data from various sources
 
 1. **Current Implementation**
    An OLTP database is simulated through a MySQL dockerized. Samples of datasets are
-   loaded into MySQL.\  
+   loaded into MySQL.    
    A simple ETL pipeline as a single Python module is responsible to extract, prepare 
    data for loading, and load into BigQuery warehouse. 
 
