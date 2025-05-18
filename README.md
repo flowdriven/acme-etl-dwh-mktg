@@ -19,16 +19,14 @@ Acme's _(*)_ e-commerce team seeks to analyze online transaction data to gain in
 Business Requirements: 
 
 1. **Customer segmentation**
-   The segmentation helps to understand customers profile and defining 
-   cross sell/upsell strategies, for example.\  
-   RFM segmentation is based on Recency, Frequency and Monetary values.\ 
-   Recency is the number of days since a customer made the last purchase.\ 
-   Frequency is the number of purchases in a given period.\
-   Monetary is the total amount of money a custome spent in a given period.\
-   Customers are divided into Premium, Gold, Silver or Standard categories.  
+   RFM segmentation is based on Recency, Frequency and Monetary values. This segmentation helps to understand customers profile and defining for example cross sell/upsell strategies.    
+   _Recency_ is the number of days since a customer made the last purchase.  
+   _Frequency_ is the number of purchases in a given period.  
+   _Monetary_ is the total amount of money a custome spent in a given period.  
+   Customers are divided into `Premium`, `Gold`, `Silver` or `Standard` categories.  
 
 2. **Exploratory Analysis**
-   Understanding how the discounts playing role in the revenues.\
+   Understanding how the discounts playing role in the revenues.  
    Understanding how marketing spend is impacting on revenue.  
 
 3. **Cross selling**
@@ -100,7 +98,7 @@ the pandas-gbq library.
 Data is extracted from four csv samples containing synthetic data:
 
 1. **customers.csv:**
-   This file contains customer’s demographics.\
+   This file contains customer’s demographics.  
    | field | description |
    | --- | --- |
    | CustomerID | Customer Unique ID | 
@@ -109,7 +107,7 @@ Data is extracted from four csv samples containing synthetic data:
    | Tenure_Months | Tenure in Months |
 
 2. **discountCoupon.csv:**
-   Discount coupons have been given for different categories in different months.\ 
+   Discount coupons have been given for different categories in different months.   
    | field | description |
    | --- | --- |
    | Month | Discount coupon applied in that month |
@@ -118,7 +116,7 @@ Data is extracted from four csv samples containing synthetic data:
    | Discount_pct | Discount Percentage for given coupon |
    
 3. **marketingSpend.csv:**
-   Marketing spend on both offline & online channels on day wise.\ 
+   Marketing spend on both offline & online channels on day wise.  
    | field | description |
    | --- | --- |
    | Date_spend | date |
@@ -127,7 +125,7 @@ Data is extracted from four csv samples containing synthetic data:
 
 4. **discountCoupon.csv:**
    This file contains actual orders data (point of Sales data) at transaction level 
-   with below variables. 
+   with below variables.   
    | field | description |
    | --- | --- |
    | CustomerID | Customer unique ID |
@@ -156,7 +154,7 @@ In this part of the use case only two layers are built for simplicity:
    Layer for dimension models and fact models. 
    Dimension models are built for customers, date, and discount coupon tables staging data. 
    In the current implementation, fact tables are built to explore and address these first business 
-   requirements: customer segmentation and discount performance on revenues.  
+   requirements: _customer segmentation_ and _discount performance_ on revenues.  
 
 ### Naming Conventions
 
